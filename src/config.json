@@ -1,0 +1,7 @@
+{
+   "BaseUrl":"http://31.7.74.219:8080",
+   "rocket_base_ws":"wss://rocket.copyazto.com/websocket",
+   "get_messages":"https://rocket.copytrade.datest.ir/api/v1/channels.messages",
+   "rocket_base_api":"https://rocket.copytrade.datest.ir/api/v1",   
+   "avatar":"http://3.68.244.242:8000"
+} 

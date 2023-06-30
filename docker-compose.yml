@@ -1,0 +1,8 @@
+version: '3'
+services:
+  nanino:
+    image: registry.gitlab.com/k2151/kipit-bussines-panel:master
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro

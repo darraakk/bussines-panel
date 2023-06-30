@@ -1,0 +1,21 @@
+variables:
+#    DOCKER_HOST: tcp://docker:2375
+    GIT_STRATEGY: clone
+
+
+services:
+  - docker:dind
+
+stages:
+  - build-image
+
+
+build-image:
+  image: docker:latest
+  stage: build-image
+  when: manual
+  script:
+        - docker login registry.gitlab.com -u $REG_USERNAME -p $REG_TOKEN
+        - docker build --pull -t registry.gitlab.com/k2151/naninkipit-bussines-panel:${CI_COMMIT_BRANCH} .
+        - docker push registry.gitlab.com/k2151/kipit-bussines-panel:${CI_COMMIT_BRANCH}
+
